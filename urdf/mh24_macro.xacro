@@ -1,6 +1,7 @@
 <?xml version="1.0" ?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
 	<xacro:macro name="motoman_mh24" params="prefix">
+		<xacro:property name="pi" value="3.14159265358979323846264338327950288419716" />
 		<!-- link list -->
 		<link name="${prefix}base_link">
 			<visual>
@@ -60,7 +61,7 @@
 				<geometry>
 					<mesh filename="package://motoman_mh24_support/meshes/mh24/visual/u_axis.stl"/>
 				</geometry>
-				<material name="blue"/>
+				<material name="silver"/>
 			</visual>
 			<collision>
 				<!-- <origin rpy="1.57 -3.1415 0" xyz="0 0 0"/> -->
@@ -76,7 +77,7 @@
 				<geometry>
 					<mesh filename="package://motoman_mh24_support/meshes/mh24/visual/r_axis.stl"/>
 				</geometry>
-				<material name="silver"/>
+				<material name="blue"/>
 			</visual>
 			<collision>
 				<!-- <origin rpy="0 0 3.1416" xyz="0 0 0"/> -->
@@ -92,7 +93,7 @@
 				<geometry>
 					<mesh filename="package://motoman_mh24_support/meshes/mh24/visual/b_axis.stl"/>
 				</geometry>
-				<material name="blue"/>
+				<material name="silver"/>
 			</visual>
 			<collision>
 				<!-- <origin rpy="-1.57 0 3.1416" xyz="0 0 0"/> -->
@@ -107,7 +108,7 @@
 				<geometry>
 					<mesh filename="package://motoman_mh24_support/meshes/mh24/visual/t_axis.stl" />
 				</geometry>
-				<material name="silver"/>
+				<material name="blue"/>
 			</visual>
 			<collision>
 				<geometry>
@@ -123,42 +124,43 @@
 			<child link="${prefix}link_s"/>
 			<origin xyz="0 0 0" rpy="0 0 0"/>
 			<axis xyz="0 0 1" />
-			<limit lower="-2.9671" upper="2.9671" effort="100" velocity="2.96" />
+			<limit lower="${-180 / 180.0 * pi}" upper="${180 / 180.0 * pi}" effort="100" velocity="3.44" />
 		</joint>
 		<joint name="${prefix}joint_l" type="revolute">
 			<parent link="${prefix}link_s"/>
 			<child link="${prefix}link_l"/>
 			<origin xyz="0.150 0 0.505" rpy="0 0 0"/>
 			<axis xyz="0 1 0" />
-			<limit lower="-1.1345" upper="2.6180" effort="100" velocity="2.96" />
+			<limit lower="${-105 / 180.0 * pi}" upper="${155 / 180.0 * pi}" effort="100" velocity="3.32" />
 		</joint>
 		<joint name="${prefix}joint_u" type="revolute">
 			<parent link="${prefix}link_l"/>
 			<child link="${prefix}link_u"/>
 			<origin xyz="0 0 0.760" rpy="0 0 0"/>
 			<axis xyz="0 -1 0" />
-			<limit lower="-1.0122" upper="3.2218" effort="100" velocity="2.96" />
+			<!-- Limited wrt to datasheet to prevent self-collisions -->
+			<limit lower="${-86 / 180.0 * pi}" upper="${163 / 180.0 * pi}" effort="100" velocity="3.67" />
 		</joint>
 		<joint name="${prefix}joint_r" type="revolute">
 			<parent link="${prefix}link_u"/>
 			<child link="${prefix}link_r"/>
 			<origin xyz="0 0 0.200" rpy="0 0 0"/>
 			<axis xyz="-1 0 0" />
-			<limit lower="-3.3161" upper="3.3161" effort="100" velocity="3.48" />
+			<limit lower="${-200 / 180.0 * pi}" upper="${200 / 180.0 * pi}" effort="100" velocity="7.16" />
 		</joint>
 		<joint name="${prefix}joint_b" type="revolute">
 			<parent link="${prefix}link_r"/>
 			<child link="${prefix}link_b"/>
 			<origin xyz="0.795 0 0" rpy="0 0 0"/>
 			<axis xyz="0 -1 0" />
-			<limit lower="-2.1817" upper="2.1817" effort="100" velocity="3.48" />
+			<limit lower="${-150 / 180.0 * pi}" upper="${150 / 180.0 * pi}" effort="100" velocity="7.16" />
 		</joint>
 		<joint name="${prefix}joint_t" type="revolute">
 			<parent link="${prefix}link_b"/>
 			<child link="${prefix}link_t"/>
 			<origin xyz="0.100 0 0" rpy="0 0 0"/>
 			<axis xyz="-1 0 0" />
-			<limit lower="-6.2831" upper="6.2831" effort="100" velocity="6.97" />
+			<limit lower="${-455 / 180.0 * pi}" upper="${455 / 180.0 * pi}" effort="100" velocity="10.82" />
 		</joint>
 		<!-- end of joint list -->
 	</xacro:macro>
