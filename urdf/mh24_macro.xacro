@@ -1,13 +1,13 @@
 <?xml version="1.0" ?>
 <robot xmlns:xacro="http://ros.org/wiki/xacro">
-	<xacro:macro name="motoman_mh24" params="prefix">
+	<xacro:macro name="yaskawa_mh24" params="prefix">
 		<xacro:property name="pi" value="3.14159265358979323846264338327950288419716" />
 		<!-- link list -->
 		<link name="${prefix}base_link">
 			<visual>
 			        <origin rpy="0 0 3.14159"/>
 				<geometry>
-					<mesh filename="package://motoman_mh24_support/meshes/mh24/visual/base_axis.stl" />
+					<mesh filename="package://yaskawa_mh24_support/meshes/mh24/visual/base_axis.stl" />
 				</geometry>
 				<material name="blue">
 					<color rgba="0 0 1 1"/>
@@ -16,7 +16,7 @@
 			<collision>
 			        <origin rpy="0 0 3.14159"/>
 				<geometry>
-					<mesh filename="package://motoman_mh24_support/meshes/mh24/collision/base_axis.stl" />
+					<mesh filename="package://yaskawa_mh24_support/meshes/mh24/collision/base_axis.stl" />
 				</geometry>
 				<material name="yellow">
 					<color rgba="0 1 1 1"/>
@@ -26,7 +26,7 @@
 		<link name="${prefix}link_s">
 			<visual>
 				<geometry>
-					<mesh filename="package://motoman_mh24_support/meshes/mh24/visual/s_axis.stl"/>
+					<mesh filename="package://yaskawa_mh24_support/meshes/mh24/visual/s_axis.stl"/>
 				</geometry>
 				<material name="silver">
 					<color rgba="0.8 0.8 0.8 1"/>
@@ -34,7 +34,7 @@
 			</visual>
 			<collision>
 				<geometry>
-					<mesh filename="package://motoman_mh24_support/meshes/mh24/collision/s_axis.stl" />
+					<mesh filename="package://yaskawa_mh24_support/meshes/mh24/collision/s_axis.stl" />
 				</geometry>
 				<material name="yellow"/>
 			</collision>
@@ -43,14 +43,14 @@
 			<visual>
 				<!-- <origin rpy="1.57 3.1416 0" xyz="0 0 0"/> -->
 				<geometry>
-					<mesh filename="package://motoman_mh24_support/meshes/mh24/visual/l_axis.stl"/>
+					<mesh filename="package://yaskawa_mh24_support/meshes/mh24/visual/l_axis.stl"/>
 				</geometry>
 				<material name="blue"/>
 			</visual>
 			<collision>
 				<!-- <origin rpy="1.57 3.1416 0" xyz="0 0 0"/> -->
 				<geometry>
-					<mesh filename="package://motoman_mh24_support/meshes/mh24/collision/l_axis.stl" />
+					<mesh filename="package://yaskawa_mh24_support/meshes/mh24/collision/l_axis.stl" />
 				</geometry>
 				<material name="yellow"/>
 			</collision>
@@ -59,14 +59,14 @@
 			<visual>
 				<!-- <origin rpy="1.57 -3.1415 0" xyz="0 0 0"/> -->
 				<geometry>
-					<mesh filename="package://motoman_mh24_support/meshes/mh24/visual/u_axis.stl"/>
+					<mesh filename="package://yaskawa_mh24_support/meshes/mh24/visual/u_axis.stl"/>
 				</geometry>
 				<material name="silver"/>
 			</visual>
 			<collision>
 				<!-- <origin rpy="1.57 -3.1415 0" xyz="0 0 0"/> -->
 				<geometry>
-					<mesh filename="package://motoman_mh24_support/meshes/mh24/collision/u_axis.stl" />
+					<mesh filename="package://yaskawa_mh24_support/meshes/mh24/collision/u_axis.stl" />
 				</geometry>
 				<material name="yellow"/>
 			</collision>
@@ -75,14 +75,14 @@
 			<visual>
 				<!-- <origin rpy="0 0 3.1416" xyz="0 0 0"/> -->
 				<geometry>
-					<mesh filename="package://motoman_mh24_support/meshes/mh24/visual/r_axis.stl"/>
+					<mesh filename="package://yaskawa_mh24_support/meshes/mh24/visual/r_axis.stl"/>
 				</geometry>
 				<material name="blue"/>
 			</visual>
 			<collision>
 				<!-- <origin rpy="0 0 3.1416" xyz="0 0 0"/> -->
 				<geometry>
-					<mesh filename="package://motoman_mh24_support/meshes/mh24/collision/r_axis.stl" />
+					<mesh filename="package://yaskawa_mh24_support/meshes/mh24/collision/r_axis.stl" />
 				</geometry>
 				<material name="yellow"/>
 			</collision>
@@ -91,14 +91,14 @@
 			<visual>
 				<!-- <origin rpy="-1.57 0 3.1416" xyz="0 0 0"/> -->
 				<geometry>
-					<mesh filename="package://motoman_mh24_support/meshes/mh24/visual/b_axis.stl"/>
+					<mesh filename="package://yaskawa_mh24_support/meshes/mh24/visual/b_axis.stl"/>
 				</geometry>
 				<material name="silver"/>
 			</visual>
 			<collision>
 				<!-- <origin rpy="-1.57 0 3.1416" xyz="0 0 0"/> -->
 				<geometry>
-					<mesh filename="package://motoman_mh24_support/meshes/mh24/collision/b_axis.stl" />
+					<mesh filename="package://yaskawa_mh24_support/meshes/mh24/collision/b_axis.stl" />
 				</geometry>
 				<material name="yellow"/>
 			</collision>
@@ -106,13 +106,13 @@
 		<link name="${prefix}link_t">
 			<visual>
 				<geometry>
-					<mesh filename="package://motoman_mh24_support/meshes/mh24/visual/t_axis.stl" />
+					<mesh filename="package://yaskawa_mh24_support/meshes/mh24/visual/t_axis.stl" />
 				</geometry>
 				<material name="blue"/>
 			</visual>
 			<collision>
 				<geometry>
-					<mesh filename="package://motoman_mh24_support/meshes/mh24/collision/t_axis.stl" />
+					<mesh filename="package://yaskawa_mh24_support/meshes/mh24/collision/t_axis.stl" />
 				</geometry>
 				<material name="yellow"/>
 			</collision>

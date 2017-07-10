@@ -32,24 +32,24 @@
 	<arg name="fs100" value="fs100" />
 
 	<group ns="load_mh24">
-		<include file="$(find motoman_mh24_support)/launch/load_mh24.launch"/>
+		<include file="$(find yaskawa_mh24_support)/launch/load_mh24.launch"/>
 	</group>
 
 	<group ns="test_mh24">
-		<include file="$(find motoman_mh24_support)/launch/test_mh24.launch"/>
+		<include file="$(find yaskawa_mh24_support)/launch/test_mh24.launch"/>
 	</group>
 
 
 	<group ns="robot_interface_streaming_mh24">
 		<group ns="dx100" >
-			<include file="$(find motoman_mh24_support)/launch/robot_interface_streaming_mh24.launch">
+			<include file="$(find yaskawa_mh24_support)/launch/robot_interface_streaming_mh24.launch">
 				<arg name="robot_ip"   value="$(arg req_arg)" />
 				<arg name="controller" value="$(arg dx100)"/>
 			</include>
 		</group>
 
 		<group ns="fs100" >
-			<include file="$(find motoman_mh24_support)/launch/robot_interface_streaming_mh24.launch">
+			<include file="$(find yaskawa_mh24_support)/launch/robot_interface_streaming_mh24.launch">
 				<arg name="robot_ip"   value="$(arg req_arg)" />
 				<arg name="controller" value="$(arg fs100)"/>
 			</include>
@@ -58,14 +58,14 @@
 
 	<group ns="robot_state_visualize_mh24">
 		<group ns="dx100" >
-			<include file="$(find motoman_mh24_support)/launch/robot_state_visualize_mh24.launch">
+			<include file="$(find yaskawa_mh24_support)/launch/robot_state_visualize_mh24.launch">
 				<arg name="robot_ip"   value="$(arg req_arg)" />
 				<arg name="controller" value="$(arg dx100)"/>
 			</include>
 		</group>
 
 		<group ns="fs100" >
-			<include file="$(find motoman_mh24_support)/launch/robot_state_visualize_mh24.launch">
+			<include file="$(find yaskawa_mh24_support)/launch/robot_state_visualize_mh24.launch">
 				<arg name="robot_ip"   value="$(arg req_arg)" />
 				<arg name="controller" value="$(arg fs100)"/>
 			</include>

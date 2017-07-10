@@ -1,20 +1,20 @@
 <package>
-	<name>motoman_mh24_support</name>
+	<name>yaskawa_mh24_support</name>
 	<version>0.3.5</version>
 	<license>Apache v2.0</license>
 	<maintainer email="maarten@de-vri.es">Maarten de Vries</maintainer>
 	<author email="maarten@de-vri.es">Maarten de Vries</author>
 
-	<url type="bugtracker">https://github.com/ros-industrial/motoman/issues</url>
-	<url type="repository">https://github.com/ros-industrial/motoman</url>
+	<url type="bugtracker">https://github.com/ros-industrial/yaskawa/issues</url>
+	<url type="repository">https://github.com/ros-industrial/yaskawa</url>
 
 	<description>
 		<p>
-			ROS Industrial support for the Yaskawa Motoman MH24.
+			ROS Industrial support for the Yaskawa MH24.
 		</p>
 		<p>
 			This package contains configuration data, 3D models and launch files
-			for Motoman MH24 manipulators.
+			for Yaskawa MH24 manipulators.
 		</p>
 		<p>
 			<b>Specifications</b>
