@@ -4,9 +4,10 @@
 	<license>Apache v2.0</license>
 	<maintainer email="maarten@de-vri.es">Maarten de Vries</maintainer>
 	<author email="maarten@de-vri.es">Maarten de Vries</author>
-	<author>Shaun Edwards</author>
+
 	<url type="bugtracker">https://github.com/ros-industrial/motoman/issues</url>
 	<url type="repository">https://github.com/ros-industrial/motoman</url>
+
 	<description>
 		<p>
 			ROS Industrial support for the Yaskawa Motoman MH24.
@@ -22,8 +23,8 @@
 			<li>mh24 - Default</li>
 		</ul>
 		<p>
-			Joint limits and maximum joint velocities are based on the information 
-			found in the online 
+			Joint limits and maximum joint velocities are based on the information
+			found in the online
 			http://www.motoman.com/datasheets/mh24.pdf
 			All urdfs are based on the default motion and joint velocity limits,
 			unless noted otherwise.
@@ -36,7 +37,7 @@
 	</description>
 
 	<buildtool_depend>catkin</buildtool_depend>
-	<build_depend>roslaunch</build_depend>
+	<test_depend>roslaunch</test_depend>
 	<run_depend>motoman_driver</run_depend>
 	<run_depend>robot_state_publisher</run_depend>
 	<run_depend>rviz</run_depend>
