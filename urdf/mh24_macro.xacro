@@ -23,6 +23,7 @@
 				</material>
 			</collision>
 		</link>
+		<link name="${prefix}vendor_base_link" />
 		<link name="${prefix}link_s">
 			<visual>
 				<geometry>
@@ -117,8 +118,14 @@
 				<material name="yellow"/>
 			</collision>
 		</link>
+		<link name="${prefix}vendor_ee" />
 		<!-- end of link list -->
 		<!-- joint list -->
+		<joint name="${prefix}vendor_base_joint" type="fixed">
+			<parent link="${prefix}base_link" />
+			<child link="${prefix}vendor_base_link" />
+			<origin xyz="0 0 0.505" />
+		</joint>
 		<joint name="${prefix}joint_s" type="revolute">
 			<parent link="${prefix}base_link"/>
 			<child link="${prefix}link_s"/>
@@ -161,6 +168,11 @@
 			<origin xyz="0.100 0 0" rpy="0 0 0"/>
 			<axis xyz="-1 0 0" />
 			<limit lower="${-455 / 180.0 * pi}" upper="${455 / 180.0 * pi}" effort="100" velocity="10.82" />
+		</joint>
+		<joint name="${prefix}vendor_ee_joint" type="fixed">
+			<parent link="${prefix}link_t" />
+			<child link="${prefix}vendor_ee" />
+			<origin rpy="0 ${-0.5 * pi} ${pi}" />
 		</joint>
 		<!-- end of joint list -->
 	</xacro:macro>
