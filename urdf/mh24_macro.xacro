@@ -5,7 +5,6 @@
 		<!-- link list -->
 		<link name="${prefix}base_link">
 			<visual>
-			        <origin rpy="0 0 3.14159"/>
 				<geometry>
 					<mesh filename="package://yaskawa_mh24_support/meshes/mh24/visual/base_axis.stl" />
 				</geometry>
@@ -14,7 +13,6 @@
 				</material>
 			</visual>
 			<collision>
-			        <origin rpy="0 0 3.14159"/>
 				<geometry>
 					<mesh filename="package://yaskawa_mh24_support/meshes/mh24/collision/base_axis.stl" />
 				</geometry>
@@ -42,14 +40,12 @@
 		</link>
 		<link name="${prefix}link_l">
 			<visual>
-				<!-- <origin rpy="1.57 3.1416 0" xyz="0 0 0"/> -->
 				<geometry>
 					<mesh filename="package://yaskawa_mh24_support/meshes/mh24/visual/l_axis.stl"/>
 				</geometry>
 				<material name="blue"/>
 			</visual>
 			<collision>
-				<!-- <origin rpy="1.57 3.1416 0" xyz="0 0 0"/> -->
 				<geometry>
 					<mesh filename="package://yaskawa_mh24_support/meshes/mh24/collision/l_axis.stl" />
 				</geometry>
@@ -58,14 +54,12 @@
 		</link>
 		<link name="${prefix}link_u">
 			<visual>
-				<!-- <origin rpy="1.57 -3.1415 0" xyz="0 0 0"/> -->
 				<geometry>
 					<mesh filename="package://yaskawa_mh24_support/meshes/mh24/visual/u_axis.stl"/>
 				</geometry>
 				<material name="silver"/>
 			</visual>
 			<collision>
-				<!-- <origin rpy="1.57 -3.1415 0" xyz="0 0 0"/> -->
 				<geometry>
 					<mesh filename="package://yaskawa_mh24_support/meshes/mh24/collision/u_axis.stl" />
 				</geometry>
@@ -74,14 +68,12 @@
 		</link>
 		<link name="${prefix}link_r">
 			<visual>
-				<!-- <origin rpy="0 0 3.1416" xyz="0 0 0"/> -->
 				<geometry>
 					<mesh filename="package://yaskawa_mh24_support/meshes/mh24/visual/r_axis.stl"/>
 				</geometry>
 				<material name="blue"/>
 			</visual>
 			<collision>
-				<!-- <origin rpy="0 0 3.1416" xyz="0 0 0"/> -->
 				<geometry>
 					<mesh filename="package://yaskawa_mh24_support/meshes/mh24/collision/r_axis.stl" />
 				</geometry>
@@ -90,14 +82,12 @@
 		</link>
 		<link name="${prefix}link_b">
 			<visual>
-				<!-- <origin rpy="-1.57 0 3.1416" xyz="0 0 0"/> -->
 				<geometry>
 					<mesh filename="package://yaskawa_mh24_support/meshes/mh24/visual/b_axis.stl"/>
 				</geometry>
 				<material name="silver"/>
 			</visual>
 			<collision>
-				<!-- <origin rpy="-1.57 0 3.1416" xyz="0 0 0"/> -->
 				<geometry>
 					<mesh filename="package://yaskawa_mh24_support/meshes/mh24/collision/b_axis.stl" />
 				</geometry>
