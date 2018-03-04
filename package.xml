@@ -1,6 +1,6 @@
 <package>
 	<name>yaskawa_mh24_support</name>
-	<version>0.3.5</version>
+	<version>0.3.6</version>
 	<license>Apache v2.0</license>
 	<maintainer email="maarten@de-vri.es">Maarten de Vries</maintainer>
 	<author email="maarten@de-vri.es">Maarten de Vries</author>
